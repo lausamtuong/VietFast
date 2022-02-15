@@ -1,0 +1,15 @@
+.Info{
+    margin-top: 100px;
+    display:flex;
+    flex-direction: column;
+    &_body{
+        display: flex;
+        align-items: center;
+        &-user{
+            width: 300px;
+        }
+        &-des{
+                
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.Info{
+    margin-top: 100px;
+    display:flex;
+    flex-direction: column;
+    &_body{
+        display: flex;
+        justify-content: center;
+       
+    }
+}

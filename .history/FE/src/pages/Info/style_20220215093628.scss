@@ -1,0 +1,31 @@
+.Info{
+    margin-top: 100px;
+    display:flex;
+    flex-direction: column;
+    &_body{
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+        &-user{
+           
+            background:black;
+            &-name-box{
+                display: flex;
+                justify-content:center; 
+                .img{
+                    width: 39%;
+                    text-align: center;
+                }
+                img{
+                    object-fit:cover;
+                    width:30%;
+                }
+            }
+        }
+        &-des{
+                width: 700px;
+                background:black;
+                height: 70px;
+        }
+    }
+}

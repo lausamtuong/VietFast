@@ -1,0 +1,38 @@
+.Info{
+    margin-top: 100px;
+    display:flex;
+    flex-direction: column;
+    &_body{
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+        &-user{
+           width: 200px;
+            background:black;
+            &-name-box{
+                display: flex;
+                justify-content:center;
+                gap:20px;
+                p{
+                    
+                } 
+                .img{
+                    width: 20%;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                img{
+                    object-fit:cover;
+                    width:100%;
+                }
+            }
+        }
+        &-des{
+                width: 700px;
+                background:black;
+                height: 70px;
+        }
+    }
+}

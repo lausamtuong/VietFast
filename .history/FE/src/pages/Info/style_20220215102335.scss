@@ -1,0 +1,98 @@
+.Info{
+    margin-top: 100px;
+    margin-bottom: 20px;
+
+    display:flex;
+    flex-direction: column;
+    padding:0 30px;
+    &_title{
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &_body{
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+        gap:20px;
+        &-user{
+            flex:0.4;
+            display:flex;
+            flex-direction: column;
+            gap:20px;
+            &-name-box{
+                border-radius: 7px;
+                display: flex;
+                justify-content:center;
+                gap:20px;
+                padding:10px 20px;
+                background:rgb(226, 219, 219);
+                .img{
+                    width: 70px;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                div p{
+                    margin: 0;
+                    word-break: break-word;
+                   
+                }
+                div .user{
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                img{
+                    object-fit:cover;
+                    width:100%;
+                }
+            }
+            &-trans-box{
+                rad
+                background:rgb(226, 219, 219);;
+                .item{
+                    cursor:pointer;
+                    display: flex;
+                    gap: 20px;
+                    padding:0 20px;
+                    align-items: center;
+                    &:hover{
+                     background: rgb(183, 208, 255);
+                    }
+                }
+            }
+        }
+        &-des{
+            border-radius: 7px;
+               flex:1;
+                background:rgb(226, 219, 219);
+                button{
+                    border: none;
+                   font-weight: 600;
+                    margin: 20px;
+                    padding:20px;
+                    border-radius:5px;
+                    background: rgb(183, 208, 255);
+                    cursor:pointer;
+                }
+                .flex{
+                    p{
+                        font-size: 20px;
+                        
+                    } 
+                    input{
+                        font-size: 30px;
+                        border: none;
+                        background:transparent;
+                        pointer-events:none;
+                        flex:1;
+                    }
+                    display: flex;
+                    gap:80px;
+                    padding-left: 30px;
+                }
+        }
+    }
+}

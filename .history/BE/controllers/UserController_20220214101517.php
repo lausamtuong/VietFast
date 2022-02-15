@@ -1,0 +1,16 @@
+<?php
+    require_once('model/Model.php');
+    class UserController{
+        public function getUser(){
+            echo ($_POST["emai"])
+            $email= isset($_POST["emai"]) ? $_POST["emai"]:'';
+            $password= isset($_POST["password"]) ? $_POST["password"]:'';
+            if($password != '' && $emai!='')
+            {
+                $usermodel=new Model();
+                $usermodel->login($email,$password);
+            }
+            else echo ("login false");
+        }
+    }
+?>

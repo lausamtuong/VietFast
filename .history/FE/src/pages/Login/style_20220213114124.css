@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.login__form {
+ height: 100vh;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+.Title {
+  font-weight: 500;
+  font-size: 30px;
+}
+.form__login {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 400px;
+}
+.input__icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+.icon__active {
+  color: rgb(63, 155, 241);
+}
+.fogot__pw {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: gray;
+  cursor: pointer;
+}
+.fogot__pw:hover {
+  color: rgb(63, 155, 241);
+}
+.remember__pw {
+  display: flex;
+  font-size: 12px;
+  gap: 4px;
+  color: gray;
+}

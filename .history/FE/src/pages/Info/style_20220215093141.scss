@@ -1,0 +1,19 @@
+.Info{
+    margin-top: 100px;
+    display:flex;
+    flex-direction: column;
+    &_body{
+        display: flex;
+        align-items: center;
+        jus
+        &-user{
+            width: 300px;
+            background:black;
+        }
+        &-des{
+                width: 700px;
+                background:black;
+                height: 70px;
+        }
+    }
+}
