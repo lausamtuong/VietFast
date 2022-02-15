@@ -1,0 +1,22 @@
+
+.Home__video{
+    top: 0;
+    position: sticky;
+    z-index: -1;
+    background: #fff;
+}
+.Home__video video {
+    width: 100%;
+    height: 100vh;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.Home__wrapper > .v-light {
+    margin-top: -72px
+}
+.v-light img {
+    width: 100%;
+}
+img{
+    height: auto;
+}

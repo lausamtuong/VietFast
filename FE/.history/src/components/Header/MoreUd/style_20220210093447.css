@@ -1,0 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.Moreud_wrap{
+width: 100%;
+height: 400px;
+background: green;
+position:absolute
+}

@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.Card-wrapper{
+    width: 300px;
+}
+.Card_img{
+    object-fit: cover;
+    w4
+}

@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.Card-wrapper{
+    width: 330px;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    color:rgb(95, 91, 91);
+}
+.Card_img img{
+    object-fit: cover;
+    width: 100%;
+}
+.Card_name p{
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.Card_name {
+margin-bottom: 40px;
+}
+.Card_title p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.Card_title {
+   
+    margin-top: 10px;
+}
+.Card_des{
+    display: flex;
+    justify-content:space-between
+}
+.Card_des-type p{
+    margin-bottom: 10px;
+}
+.Card_des-price p{
+    margin-bottom: 10px;
+}

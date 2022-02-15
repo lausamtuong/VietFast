@@ -1,0 +1,40 @@
+import React from "react";
+import "./style.css";
+import video from "../../images/home__vd.mp4";
+import v_light from "../../images/Vlight.svg";
+const Home = () => {
+  return (
+    <div className="Home__wrapper">
+      <div className="Home__video">
+        <video autoPlay playsInline muted loop>
+          <source src={video} type="video/mp4" />
+        </video>
+      </div>
+      <div class="container-fluid cta-button">
+        <div class="row justify-content-center">
+          {" "}
+          <a
+            class="deposit"
+            href="https://reserve.vinfastauto.com/"
+            onclick="gtag_custom_link(this);"
+          >
+            Đặt cọc ngay
+          </a>{" "}
+          <a
+            class="more-information"
+            href="https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwb84ed557/raisinghands/documents/VF8-VF9_Brochure.pdf"
+            onclick="gtag_custom_link(this);"
+          >
+            Tìm hiểu thêm
+          </a>
+        </div>
+      </div>
+      <div className="v-light">
+        <img alt="v-light" src={v_light} />
+      </div>
+      <div className="block-new-home"></div>
+    </div>
+  );
+};
+
+export default Home;

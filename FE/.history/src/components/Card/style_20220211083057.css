@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.Card-wrapper{
+    width: 330px;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+.Card_img img{
+    object-fit: cover;
+    width: 100%;
+}
+.Card_name p{
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.Card_name {
+}
+.Card_title p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.Card_title {
+   
+    margin-top: 10px;
+}
