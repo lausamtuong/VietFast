@@ -13,6 +13,7 @@ import Footer from '../components/Footer/Footer';
 import Info from '../pages/Info/Info';
 import History from '../pages/History/History';
 import Test from '../pages/test/test';
+import Admin from '../pages/admin/Admin'
 
 const Route_ = (props) => {
   return <div>
@@ -28,6 +29,7 @@ const Route_ = (props) => {
           <Route path="/history" element={<History />}></Route>
           <Route path="/test" element={<Test />}></Route>
           <Route path="/" element={<Home width={props.width} />}></Route>
+
       </Routes>
       <Footer />
   </div>;

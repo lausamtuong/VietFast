@@ -1,0 +1,20 @@
+import { Avatar } from '@nextui-org/react'
+import React from 'react'
+import './user-info.scss'
+import avt from '../../assets/images/avt.jpg'
+
+const UserInfo = ({ user }) => {
+    return (
+      <div className="user-info">
+        <div className="user-info__img">
+          <Avatar src={avt} size='xl' color="secondary" bordered zoomed />
+        </div>
+        <div className="user-info__text">
+          <span className='name'>{user.name}</span>
+          <span className='role'>{user.role}</span>
+        </div>
+      </div>
+    );
+}
+
+export default UserInfo
