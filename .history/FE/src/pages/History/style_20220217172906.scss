@@ -1,0 +1,39 @@
+.History{
+   min-height: 100vh;
+   display:flex;
+   margin-top: 100px;
+   &-left{
+       &-header{
+          
+           .top{
+               background: red;
+               display: flex;
+               padding:20px;
+               border-radius: 15px;
+           }
+           .bot{
+               .navigate{
+                flext
+               }
+           }
+           .image{
+                width: 60px;
+                height: 60px;   
+                border-radius: 100rem;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
+           }
+           .name{
+               p{
+                   font-weight: 700;
+                   font-size: 20px;
+                   margin-left: 10px;
+               }
+           }
+           
+       }
+   }
+}

@@ -1,0 +1,61 @@
+.Item_card {
+  padding: 20px;
+  background: rgb(32, 32, 32);
+}
+.Item {
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-type {
+      p {
+        font-weight: 700;
+        font-size: 24px;
+        margin-left: 10px;
+      }
+    }
+    &-status{
+        display: flex;
+        
+        align-items: center;
+        div{
+           display: flex;
+          
+           align-items: center;
+            font-size: 1em;
+            svg{
+                font-size: 30px;
+                margin-right: 10px;
+            }
+       
+        }
+       
+    }
+  }
+  &_body {
+    &-img {
+      width: 150px;
+      height: 150px;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &_footer {
+  }
+}
+.green{
+    color:rgb(11, 216, 148);
+    span{
+        border-right: 2px solid gray;
+        padding-right:10px
+    }
+}
+.red{
+    color: rgb(238, 128, 128);
+    svg{
+       
+        margin-left:10px
+    }
+}

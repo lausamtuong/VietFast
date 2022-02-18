@@ -1,0 +1,24 @@
+.Item_card{
+    padding:20px;
+}
+.Item{
+    &_header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-type{
+            font-weight: 700;
+        }
+    }
+    &_body{
+        &-img{
+            width: 150px;
+            height: 150px;
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &_footer{}
+}

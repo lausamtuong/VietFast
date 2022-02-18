@@ -1,0 +1,50 @@
+.History{
+   min-height: 100vh;
+   display:flex;
+   margin-top: 100px;
+ 
+   &-left{
+       &-header{
+          
+           .top{
+               background: red;
+               display: flex;
+               padding:20px;
+               border-radius: 15px;
+               margin-bottom:20px;
+           }
+           .bot{
+               background: red;
+               border-radius: 15px;
+                padding:20px;
+               .navigate{
+                display: flex;
+               font-size: 21px;
+                align-items: center;
+                p{
+                    padding-left: 20px;
+                    fw600
+                }
+               }
+           }
+           .image{
+                width: 60px;
+                height: 60px;   
+                border-radius: 100rem;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
+           }
+           .name{
+               p{
+                   font-weight: 700;
+                   font-size: 20px;
+                   margin-left: 10px;
+               }
+           }
+           
+       }
+   }
+}

@@ -1,0 +1,12 @@
+.Item_card{
+    padding:20px;
+}
+.Item{
+    &-header{
+        display: flex;
+        justify-content: spac;
+        align-items: center;
+    }
+    &-body{}
+    &-footer{}
+}
