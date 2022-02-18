@@ -15,7 +15,7 @@ import { BsCart2 } from "react-icons/bs";
 import { BiNews } from "react-icons/bi";
 import { FaTimes } from "react-icons/fa";
 import "./style.scss";
-import Sidebar from "../Sidebar/Sidebar";
+import Sidebar from "../SidebarX/Sidebar";
 import { Link, useNavigate } from "react-router-dom";
 import avt from "../../images/avt_default.png";
 import { logoutUser } from "../../reduxToolkit/apiRequest";

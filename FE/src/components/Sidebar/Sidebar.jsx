@@ -1,94 +1,61 @@
-import React, { useEffect, useRef, useState } from "react";
-import {
-  AiOutlineMenu,
-  AiOutlineGlobal,
-  AiOutlineHome,
-  AiFillCar,
-  AiOutlineGift,
-} from "react-icons/ai";
-import { BiNews } from "react-icons/bi";
-import { GrContact } from "react-icons/gr";
-import { FaTimes } from "react-icons/fa";
-
-import "./style.css";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-const NavItems = [
-  {
-    display: "Trang chủ",
-    icon: <AiOutlineHome />,
-    to: "/",
-    section: "",
-  },
-  {
-    display: "Sản phẩm",
-    icon: <AiFillCar />,
-    to: "/product",
-    section: "product",
-  },
-  {
-    display: "Tin Tức",
-    icon: <BiNews />,
-    to: "/news",
-    section: "news",
-  },
- 
-];
+import React, { useEffect, useState } from 'react'
+import './sidebar.scss'
+import { Link, useLocation } from 'react-router-dom'
+import { images } from '../../constants'
+import sidebarNav from '../../config/sidebarNav'
+import {FcExport} from "react-icons/fc";
 const Sidebar = () => {
-  const navigate = useNavigate();
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [stepHeight, setStepHeight] = useState(0);
-  const sideBarRef = useRef();
-  const indicatorRef = useRef();
-  const location = useLocation();
-  useEffect(() => {
-    setTimeout(() => {
-      const sideBaritem = sideBarRef.current.querySelector(".nav__tablet-item");
-      indicatorRef.current.style.height = `${sideBaritem.clientHeight }px`;
-      setStepHeight(sideBaritem.clientHeight+20);
-    }, 50);
-  }, []);
-  useEffect(() => {
-    const curPath = window.location.pathname.split("/")[1];
+    const [activeIndex, setActiveIndex] = useState(0)
+    const location = useLocation()
 
-    const activeItem = NavItems.findIndex((item) => item.section === curPath);
-    setActiveIndex(curPath.length === 0 ? 0 : activeItem);
-    if (curPath === "login") setActiveIndex(-10);
-  }, [location]);
-  return (
-    <ul ref={sideBarRef} className="nav__tablet-list">
-      <div
-        ref={indicatorRef}
-        style={{
-          transform: `translateX(-50%) translateY(${
-            activeIndex * stepHeight +15
-          }px)`,
-        }}
-        className="indicator"
-      ></div>
-      {NavItems.map((item, index) => (
-        <Link to={item.to} key={index}>
-          <li
-            className={`nav__tablet-item ${
-              activeIndex === index ? "active" : ""
-            }`}
-          >
-            {item.icon}
-            <p>{item.display}</p>
-          </li>
-        </Link>
-      ))}
+    useEffect(() => {
+        const temp = window.location.pathname.split('/')
+        let size = (temp.length==2) ? 1 : temp.length;
+        const curPath = window.location.pathname.split("/")[size-1];
+        const activeItem = sidebarNav.findIndex(item => item.section === curPath)
 
-      <div className="button_" onClick={() => navigate("login")}>
-        <button className="button">
-          <span className="button-text"> Tài khoản</span>
-        </button>
+        setActiveIndex(curPath.length === 0 ? 0 : activeItem)
+    }, [location])
+
+    const closeSidebar = () => {
+        document.querySelector('.main__content').style.transform = 'scale(1) translateX(0)'
+        setTimeout(() => {
+            document.body.classList.remove('sidebar-open')
+            document.querySelector('.main__content').style = ''
+        }, 500);
+    }
+
+    return (
+      <div className="sidebar">
+        <div className="sidebar__logo">
+          <img src={images.logo} alt="" />
+          <div className="sidebar-close" onClick={closeSidebar}>
+            <i className="bx bx-x"></i>
+          </div>
+        </div>
+        <div className="sidebar__menu">
+          {sidebarNav.map((nav, index) => (
+            <Link
+              to={nav.link}
+              key={`nav-${index}`}
+              className={`sidebar__menu__item ${
+                activeIndex === index && "active"
+              }`}
+              onClick={closeSidebar}
+            >
+              <div className="sidebar__menu__item__icon">{nav.icon}</div>
+              <div className="sidebar__menu__item__txt">{nav.text}</div>
+            </Link>
+          ))}
+          <div className="sidebar__menu__item">
+            <div className="sidebar__menu__item__icon">
+              <FcExport size={30}/>
+            </div>
+            <div className="sidebar__menu__item__txt">Log out</div>
+          </div>
+        </div>
       </div>
-      <li className="nav__tablet-item" onClick={() => navigate("contact")} style={{cursor: "pointer"}}>
-        <GrContact />
-        Liên hệ
-      </li>
-    </ul>
-  );
-};
+    );
+}
 
-export default Sidebar;
+export default Sidebar
