@@ -1,0 +1,165 @@
+import React, { useState } from "react";
+import "./news.scss";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+var cnt =0;
+const News = () => {
+  window.scrollTo(0, 0);
+  const [data, setData] = useState([
+    api.splice(0, 4).map((item, ind) => {
+      return (
+        <div className="item" key={ind}>
+          <RelatedCard
+            topic="Technology"
+            date="March 26, 2022"
+            title="Japan’s virus success has puzzled the world. Is its luck running out?"
+            name={item.name}
+            img={item.img}
+          />
+        </div>
+      );
+    }),
+  ]);
+  const [content, setContent] = useState([
+    api.splice(0, 6).map((item, ind) => {
+      return (
+        <div className="item" key={ind}>
+          <CardContent
+            name={item.name}
+            img={item.img}
+          />
+        </div>
+      );
+    }),
+  ]);
+  const showMore = () => {
+    console.log( api.splice(0,cnt+6))
+    setContent([
+        api.splice(0,cnt+6).map((item, ind) => {
+            return (
+              <div className="item" key={ind}>
+                <CardContent
+                  name={item.name}
+                  img={item.img}
+                />
+              </div>
+            );
+          })
+    ]);
+  };
+ 
+  return (
+    <div className="news">
+      <div className="news__header">
+        <div className="hot__news">
+          <NewsCard
+            topic="Technology"
+            date="March 26, 2022"
+            title="Japan’s virus success has puzzled the world. Is its luck running out?"
+          />
+        </div>
+        <div className="related__news">
+          <div className="label">RELATED</div>
+          {data.map((item, index) => item)}
+        </div>
+      </div>
+      <div className="news__future">
+        <div className="label">Feature News</div>
+        <div className="content">
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar]}
+            spaceBetween={50}
+            slidesPerView="auto"
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            autoplay={{ delay: 3000 }}
+          >
+            <SwiperSlide>
+              <NewsCard
+                topic="Technology"
+                date="March 26, 2022"
+                title="Japan’s virus success has puzzled the world. Is its luck running out?"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <NewsCard
+                topic="Technology"
+                date="March 26, 2022"
+                title="Japan’s virus success has puzzled the world. Is its luck running out?"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <NewsCard
+                topic="Technology"
+                date="March 26, 2022"
+                title="Japan’s virus success has puzzled the world. Is its luck running out?"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <NewsCard
+                topic="Technology"
+                date="March 26, 2022"
+                title="Japan’s virus success has puzzled the world. Is its luck running out?"
+              />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </div>
+      <div className="Content">
+     {content.map((item, index) => item)}
+      </div>
+      <button onClick={showMore}>SHOW MORE</button>
+    </div>
+  );
+};
+
+const NewsCard = (props) => {
+  return (
+    <div className="news__card">
+      <div className="image">
+        <img src="https://source.unsplash.com/random" alt="" />
+      </div>
+      <div className="text">
+        <div className="timestamp">
+          <span>
+            {props.topic} / {props.date}
+          </span>
+        </div>
+        <div className="title">{props.title}</div>
+      </div>
+    </div>
+  );
+};
+
+const RelatedCard = (props) => {
+  return (
+    <div className="related__card">
+      <div className="image">
+        <img src={props.img} alt="img" />
+      </div>
+      <div className="text">
+        <div className="title">{props.name}</div>
+      </div>
+    </div>
+  );
+};
+const CardContent = (props)=>{
+    return (
+        <div className="card_content">
+            <div className="image">
+                <img src={props.img} alt="avt" />
+            </div>
+            <div className="title">
+        <span>
+             {props.name} 
+        </span>
+            </div>
+        </div>
+        )
+}
+export default News;

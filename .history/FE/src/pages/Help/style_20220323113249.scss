@@ -1,0 +1,19 @@
+.title{
+   
+    margin: 100px 50px 50px 50px;
+    border-bottom:2px solid rgb(204, 204, 204);
+
+    p{
+        font-weight: 600;
+        font-size: 40px;
+        color:black;
+        padding-left: 10px;
+    }
+}
+.address{
+    display:flex;
+    flex-wrap: wrap;
+    &_title{
+        fw
+    }
+}
