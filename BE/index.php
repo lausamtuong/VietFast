@@ -18,4 +18,3 @@ $controller= isset($_GET["controller"]) ? $_GET["controler"].'Controller' :"Mode
 $action = isset($_POST["action"])? $_POST["action"]:'getUser';
 $usercontroller = new $controller();
 $usercontroller->$action();
-?>

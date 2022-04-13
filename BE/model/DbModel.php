@@ -7,4 +7,3 @@
             else return $con;
         }
     }
-?>
