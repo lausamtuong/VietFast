@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    margin-top: 8px;
+}
+
+.content ul {
+    margin-bottom: 16px;
+}
+
+.content .description {
+    margin-top: 24px;
+}
+
+.content .product img:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.content .banner {
+    text-align: center;
+}
+
+.footer {
+    background-color: #212529;
+    color: #fff;
+    text-align: center;
+    margin-bottom: -16px;
+}
+
+.footer li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 8px;
+}
+
+.footer li a {
+    text-decoration: none;
+    color: #ffffff8c;
+}
